@@ -70,6 +70,16 @@ const HeroSection = () => {
 
   return (
     <section className="hero">
+      <div className="hero-slider" aria-hidden="true">
+        {HERO_SLIDES.map((src, index) => (
+          <div
+            key={src}
+            className={`hero-slide ${index === active ? 'is-active' : ''}`}
+          >
+            <img src={src} alt="" />
+          </div>
+        ))}
+      </div>
       <div className="hero-content" data-reveal>
         <p className="hero-eyebrow">Novastone · Piedra Sinterizada</p>
         <h1>La evolucion natural del diseno</h1>
@@ -78,24 +88,16 @@ const HeroSection = () => {
           contemporanea para proyectos residenciales y comerciales.
         </p>
       </div>
-      <div className="hero-slider" data-reveal>
-        <div className="hero-slider-track">
-          {HERO_SLIDES.map((src, index) => (
-            <button
-              key={src}
-              type="button"
-              className={`hero-slide ${index === active ? 'is-active' : ''}`}
-              onClick={() => setActive(index)}
-            >
-              <img src={src} alt="Superficie de marmol" />
-            </button>
-          ))}
-        </div>
-        <div className="hero-slider-indicator">
-          {HERO_SLIDES.map((_, index) => (
-            <span key={index} className={index === active ? 'active' : ''} />
-          ))}
-        </div>
+      <div className="hero-slider-indicator" role="tablist">
+        {HERO_SLIDES.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className={index === active ? 'active' : ''}
+            onClick={() => setActive(index)}
+            aria-label={`Ver slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
@@ -379,6 +381,19 @@ function App() {
   }, []);
 
   useRevealOnScroll();
+
+  useEffect(() => {
+    const header = document.querySelector('.site-header');
+    if (!header) return undefined;
+
+    const handleScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const local = localStorage.getItem(LOCAL_PRODUCTS_KEY);

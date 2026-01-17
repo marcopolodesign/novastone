@@ -1,5 +1,8 @@
 # Novastone Website Context (Market + Content + Structure)
 
+## Visual reference
+Reference project: https://mcmstonetailors.com
+
 ## Business context
 Novastone sells marble and sintered-stone surfaces in Argentina. The site should position the brand against premium global players (Neolith, Dekton) and local competition (Purastone) with clear product browsing, applications, and contact/lead capture.
 
