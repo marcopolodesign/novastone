@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pure-white",
+    "name": "Pure White",
+    "series": "Serie 20mm",
+    "finish": "Mate",
+    "images": [
+      "/products/pure-white-1.jpg",
+      "/products/pure-white-2.jpg"
+    ]
+  },
+  {
+    "id": "rhine-river",
+    "name": "Rhine River",
+    "series": "Serie 20mm",
+    "finish": "Mate",
+    "images": [
+      "/products/rhine-river-1.jpg",
+      "/products/rhine-river-2.jpg"
+    ]
+  },
+  {
+    "id": "nero-portoro",
+    "name": "Nero Portoro",
+    "series": "Serie Full Body",
+    "finish": "Pulido",
+    "images": [
+      "/products/nero-portoro-1.jpg",
+      "/products/nero-portoro-2.jpg"
+    ]
+  }
+]
