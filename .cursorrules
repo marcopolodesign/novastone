@@ -1,0 +1,80 @@
+# Public Website - TecnoFit
+
+## 🎯 YOU ARE IN: Public Website Repository
+
+**Git Repository**: `/Users/mataldao/Local/tf-marcopolo/website/tecno-website/.git`
+**Deployment**: https://somostecnofit.com
+**Branch**: main
+
+## 📚 Required Documentation
+
+**Read these files in parent directory** (`../`):
+1. `../AGENT_GUIDE.md` - Complete project guide
+2. `../GIT_WORKFLOW.md` - Git operations
+3. `../DATABASE_OPERATIONS.md` - Database management
+4. `../QUICK_START.md` - Quick reference
+
+## 🚀 Quick Commands
+
+```bash
+# You are here
+cd /Users/mataldao/Local/tf-marcopolo/website/tecno-website
+
+# Develop
+npm run dev  # http://localhost:5174
+
+# Deploy
+git add .
+git commit -m "feat: your change"
+git push origin main
+# ✅ Auto-deploys to https://somostecnofit.com
+```
+
+## ⚠️ Important
+
+- This is a SEPARATE git repository from admin
+- Always verify you're in `/Users/mataldao/Local/tf-marcopolo/website/tecno-website` before git operations
+- Uses ONLY anon key (NO service role key!)
+- No authentication - public website only
+- Form submissions go to Supabase prospects table
+
+## 🔗 Links
+
+- **Production**: https://somostecnofit.com
+- **Supabase**: https://supabase.com/dashboard/project/buntxbgjixlksffbscle
+- **Vercel**: https://vercel.com/dashboard
+
+## 📝 Environment Variables
+
+```env
+VITE_SUPABASE_URL=https://buntxbgjixlksffbscle.supabase.co
+VITE_SUPABASE_ANON_KEY=[anon key]
+# NO service role key on public website!
+```
+
+## 🎨 Tech Stack
+
+- React + Vite
+- Tailwind CSS
+- GSAP (NOT framer-motion)
+- Supabase client
+
+## 📋 Main Sections
+
+- HeroSection.jsx - Landing hero
+- IntroSection.jsx - Introduction
+- EstacionesSection.jsx - Training stations
+- MethodologySection.jsx - Training methodology
+- TFExperience.jsx - Experience showcase
+- BannerSection.jsx - Call to action
+- MapSection.jsx - Location map
+- ContactSidecart.jsx - Contact form (submits to Supabase)
+
+## 🔐 Security
+
+- Only use anon key (public access)
+- RLS policies allow anonymous INSERT on prospects table
+- No authentication required
+- Form validation on client side
+
+For complete documentation, see `../AGENT_GUIDE.md`
