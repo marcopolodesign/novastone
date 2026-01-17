@@ -1,18 +1,35 @@
-# React + Vite
+# Novastone Website (Codex Overview)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project goal
+Static marketing website for Novastone, built with Vite + React + Tailwind.
 
-Currently, two official plugins are available:
+## Tech stack
+- Vite + React (JSX, ES modules)
+- Tailwind CSS (via `@tailwindcss/vite`)
+- Vercel Analytics
+- Supabase client (if enabled in the app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder map
+- `index.html` Vite entry
+- `src/main.jsx` app bootstrap
+- `src/App.jsx` primary page composition
+- `src/components` UI, layout, and section components
+- `src/assets` images, SVGs, fonts
+- `src/lib/supabase.js` Supabase client setup
+- `public` static assets
+- `tailwind.config.js` Tailwind configuration
+- `vite.config.js` Vite config
 
-## React Compiler
+## Scripts
+- `npm run dev` local dev server
+- `npm run build` production build
+- `npm run preview` preview production build
+- `npm run lint` ESLint
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Env setup
+Copy `.env.example` to `.env` and replace values, or use `.env.development` for local Supabase.
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Notes for Codex
+- This repo is a structural clone of a Tecnofit site; keep the same project layout and tooling.
+- When adding new sections, follow the existing pattern in `src/components/sections`.
+- Keep assets in `src/assets` and reference via relative imports in components.
